@@ -1,14 +1,11 @@
 package com.bgee.base.io;
 
-import java.awt.List;
 import java.io.File;
-import java.util.Arrays;
 
 import com.bgee.base.constants.IOConstants;
 
 public class ListFileName {
 	
-//	public static final String FILE_URL = ""
 	
 	public static void main(String[] args) {
 		File file = new File(IOConstants.COMMON_URL);
