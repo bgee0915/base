@@ -10,11 +10,14 @@ import java.util.zip.ZipOutputStream;
 
 import com.bgee.base.constants.IOConstants;
 
+/**
+ * 压缩单个文件
+ * @author bgee
+ *
+ */
 public class ZipOutputStreamFile {
 	public static void main(String[] args) {
-//		 zipOut.putNextEntry(new ZipEntry(file.getName()));
 		try {
-			
 			File file = new File(IOConstants.COMMON_URL + "1.jpg");
 			File zipFile = new File(IOConstants.COMMON_URL + "1jpg.zip");
 			InputStream fileIn = new FileInputStream(file);
