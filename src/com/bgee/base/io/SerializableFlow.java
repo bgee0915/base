@@ -28,6 +28,7 @@ public class SerializableFlow {
 			ObjectInputStream in = new ObjectInputStream(new FileInputStream(objectFile)) ;
 			Object object = in.readObject();
 			System.out.println(object);
+			in.close();
 			
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -11,6 +11,11 @@ import java.util.zip.ZipInputStream;
 
 import com.bgee.base.constants.IOConstants;
 
+/**
+ * 解压文件
+ * @author bgee0915
+ *
+ */
 public class CompressFile {
 	public static void main(String[] args) {
 		try {
@@ -48,6 +53,9 @@ public class CompressFile {
 				input.close();
 				out.close();
 			}
+			
+			zipInput.close();
+			zipFile.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
