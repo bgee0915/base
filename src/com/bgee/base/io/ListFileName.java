@@ -15,5 +15,12 @@ public class ListFileName {
 		for(File f : allPath) {
 			System.out.println(f);
 		}
+		
+//		nio流 新实现方式, 速度更快
+//		try(DirectoryStream<Path> entries = Files.newDirectoryStream(Paths.get(IOConstants.COMMON_URL), "*.txt")){	//try 确保目录流被正确关闭, 参数2 为 glob过滤条件  windows下需要4次\转义   "c:\\\\";
+//			for(Path entry : entries) {
+//				FunUtil.println(entry);
+//			}
+//		}
 	}
 }
