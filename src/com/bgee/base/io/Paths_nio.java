@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 import com.bgee.base.util.FunUtil;
 
-public class Path_Paths {
+public class Paths_nio {
 	public static void main(String[] args) {
 		
 		try {

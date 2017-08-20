@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import com.bgee.base.constants.IOConstants;
 import com.bgee.base.util.FunUtil;
 
-public class Files_io {
+public class Files_nio {
 	public static void main(String[] args) {
 		try {
 			Path targetPath = Paths.get(IOConstants.COMMON_URL + "love.txt");
