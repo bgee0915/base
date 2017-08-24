@@ -30,7 +30,7 @@ public class CompressFile {
 			
 			while((entry = zipInput.getNextEntry()) != null) {
 				outFile = new File("D:\\x\\" + entry.getName());
-				
+				System.out.println("1: outFile= " + outFile);
 				if(!outFile.exists()) {
 					
 					if(entry.isDirectory()) {
