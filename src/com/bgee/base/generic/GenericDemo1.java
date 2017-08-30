@@ -2,7 +2,9 @@ package com.bgee.base.generic;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 1： 	为泛型加上限定 ,  T 必须为 comparable(根据你的限定类而变化) 的子类型 
@@ -14,12 +16,14 @@ import java.util.List;
  * 7：	泛型使用要考虑许多的限制, 大多都是由类型擦除引起的  (第五条)
  * 8： 	禁止使用带有类型变量的静态域方法
  * 9：	不能抛出或使用泛型类的实例
- * 10：	上边界  <? extends Fruit>	必须为 Fruit 的子类型
- * 11:	下边界 <? super Banana>	必须为 Banana 的父类型
+ * 10:	创建泛型数组是非法的  (Cannot create a generic array of ArrayList<xxx>)
+ * 11：	上边界  <? extends Fruit>	必须为 Fruit 的子类型
+ * 12:	下边界 <? super Banana>	必须为 Banana 的父类型
  * 
  * 12:  如果要从集合中读取类型T的数据，并且不能写入，可以使用 ? extends 通配符；(Producer Extends)
 		如果要从集合中写入类型T的数据，并且不需要读取，可以使用 ? super 通配符；(Consumer Super)
 		如果既要存又要取，那么就不要使用任何通配符。
+ *  
  *  
  *  
  * @author bgee0915
@@ -49,6 +53,14 @@ public class GenericDemo1<T extends Comparable<T> & Serializable> {
 //		downList.add(new Fruit()); 			// boom!
 		
 //		Banana banana = downList.get(0);	// boom!
+		
+		
+		List<?> nList = new ArrayList<>();
+//		nList.add("a");					// boom!
+//		String zero = nList.get(0);		// boom! 
+		
+		
+//		List<String> []arrayGeneric = new ArrayList<String>[10];	// boom!
 	}
 	
 }
