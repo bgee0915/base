@@ -2,12 +2,10 @@ package com.bgee.base.generic;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
- * 1： 	为泛型加上限定 ,  T 必须为 comparable(根据你的限定类而变化) 的子类型 
+ * 1： 	为泛型加上限定 ,  T 必须为 Comparable(根据你的限定类而变化) 的子类型 
  * 2： 	如果有多个限定  则加上 & 连接
  * 3：	如果不给定限定, 则虚拟机编译时 原始类型 T 会被 Object 替换, 否则取第一个限定的类型 (此处为 Comparable)
  * 4：	为了提高效率, 一般将标签接口(没有方法的接口) 放在边界列表的末尾最后
@@ -23,6 +21,8 @@ import java.util.Map;
  * 12:  如果要从集合中读取类型T的数据，并且不能写入，可以使用 ? extends 通配符；(Producer Extends)
 		如果要从集合中写入类型T的数据，并且不需要读取，可以使用 ? super 通配符；(Consumer Super)
 		如果既要存又要取，那么就不要使用任何通配符。
+		
+ * 13：	数组和泛型不能很好地混合使用
  *  
  *  
  *  
