@@ -2,6 +2,7 @@ package com.bgee.base.generic;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -73,4 +74,58 @@ class Apple extends Fruit{}
 class Banana extends Fruit{}
 
 class RedBanana extends Banana{}
+
+class Stack<E>{
+	private E[] elements;
+	
+	private int size = 0;
+	
+	private static final int DEFAULT_INITIAL_CAPACITY = 20;
+	
+	public Stack() {
+		elements = (E[])new Object[DEFAULT_INITIAL_CAPACITY];
+	}
+
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	public void ensureCapacity() {
+		if(elements.length >= size) {
+			elements = Arrays.copyOf(elements, size * 2 + 1);
+		}
+	}
+	
+	public void push(E obj) {
+		ensureCapacity();
+		elements[size++] = obj;
+	}
+	
+	public E pop() {
+		if(0 == size) {
+			return null;
+		}
+		
+		E result = elements[--size];
+		elements[size] = null;
+		return result;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
