@@ -26,6 +26,10 @@ public class ReflectDemo3 {
 }
 
 class Man{
+	
+//	为了反射实例化的安全 最好定义一个无参构造函数  因为如果有一个有参数的构造函数而没有显示的无参构造函数, 反射实例化会抛异常
+	Man(){} 
+	
 	private String name;
 
 	public String getName() {
