@@ -17,6 +17,9 @@ public class ReflectDemo4 {
 			
 //			栈  先进后出 
 			Constructor<?> []cons = wumanClass.getDeclaredConstructors();
+			
+			FunUtil.println(cons[0],cons[1],cons[2],cons[3]);
+			
 			wuman1 = (WuMan) cons[0].newInstance(18);
 			wuman2 = (WuMan) cons[1].newInstance("Mrs liu");
 			wuman3 = (WuMan) cons[2].newInstance("Mrs liu",18);
