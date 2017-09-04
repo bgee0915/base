@@ -9,8 +9,10 @@ import com.bgee.base.util.FunUtil;
  */
 public class ReflectDemo3 {
 	public static void main(String[] args) {
-		Man man = null;
 		Class<?> manclass = null;
+		Man man = null;
+		
+		
 		
 		try {
 			manclass = Class.forName("com.bgee.base.reflect.Man");
