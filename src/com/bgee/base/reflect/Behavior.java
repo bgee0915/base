@@ -1,5 +1,6 @@
 package com.bgee.base.reflect;
 
+import com.bgee.base.util.FunUtil;
 
 public  interface Behavior {
 	public static final String fieldOne = "1";
@@ -20,21 +21,26 @@ class Dog extends Animal implements Behavior {
 	
 	@Override
 	public void sleep() {
-		
+		FunUtil.println("dog sleep");
 	}
  
 	@Override
 	public void eat() {
+		FunUtil.println("dog eat");
 		
 	}
 	
 	@Override
 	public void fuck() {
+		FunUtil.println("dog fuck");
 		
 	}
+	
+	Dog(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
 
-	
-	
 	
 	public int thisField;
 	private int age;
@@ -58,10 +64,12 @@ class Dog extends Animal implements Behavior {
 
 	@Override
 	public String toString() {
-		return "Dog [age=" + age + ", name=" + name + "]";
+		return "Dog [thisField=" + thisField + ", age=" + age + ", name=" + name + "]";
 	}
-
 	
 	
+	public void run() {
+		FunUtil.println("dog run");
+	}
 	
 }

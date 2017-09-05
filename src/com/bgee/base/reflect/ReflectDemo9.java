@@ -27,10 +27,17 @@ public class ReflectDemo9 {
 			}
 			
 			
-			
 			//所有的    自己的 或者 继承的父类 或者 实现的接口的 public 的 字段
 			Field []superF = classdemo9.getFields();
 			System.out.println(superF.length);
+			for(int j=0; j<superF.length; j++) {
+				int superModifierNum = superF[j].getModifiers();
+				String superModifier = Modifier.toString(superModifierNum);
+				
+				String superTypeName = superF[j].getType().getName();
+				
+				FunUtil.print(superModifier," ", superTypeName," ", superF[j].getName(),"\n");
+			}
 			
 			
 		} catch (Exception e) {
