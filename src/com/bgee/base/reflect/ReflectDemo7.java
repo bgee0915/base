@@ -5,6 +5,11 @@ import java.lang.reflect.Parameter;
 
 import com.bgee.base.util.FunUtil;
 
+/**
+ * 获取构造函数的参数及类型
+ * @author bgee0915
+ *
+ */
 public class ReflectDemo7 {
 	public static void main(String[] args) {
 		
