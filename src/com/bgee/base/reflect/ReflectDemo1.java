@@ -4,7 +4,7 @@ package com.bgee.base.reflect;
 import com.bgee.base.util.FunUtil;
 
 /**
- * 反射实例1
+ * 反射实例1 获取类全名
  * @author bgee0915
  *
  */
