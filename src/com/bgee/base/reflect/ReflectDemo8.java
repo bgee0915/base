@@ -14,7 +14,7 @@ public class ReflectDemo8 {
 	public static void main(String[] args) {
 		Class<?> classdemo8 = null;
 		try {
-			classdemo8 = Class.forName("com.bgee.base.reflect.WuMan");
+			classdemo8 = Class.forName("com.bgee.base.reflect.Dog");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -19,7 +19,7 @@ public class ReflectDemo10 {
 			methodRun.invoke(classdemo10.newInstance());
 			
 //			"see" 								:	Dog类的方法名
-//			Class.forName("java.lang.String")	:	"see" 方法的返回类型
+//			Class.forName("java.lang.String")	:	"see" 方法的参数的类型
 //			" his master "						:	"see" 方法的参数
 //			classdemo10.newInstance()			:	Dog 类的 实例化对象
 			
