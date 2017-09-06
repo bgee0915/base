@@ -36,6 +36,8 @@ class Dog extends Animal implements Behavior {
 		
 	}
 	
+	Dog(){}
+	
 	Dog(String name, int age){
 		this.name = name;
 		this.age = age;
@@ -72,4 +74,8 @@ class Dog extends Animal implements Behavior {
 		FunUtil.println("dog run");
 	}
 	
+	public String see(String something) {
+		FunUtil.println("dog see " + something);
+		return something;
+	}
 }
