@@ -3,7 +3,7 @@ package com.bgee.base.reflect;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public class ReflectDemo9 {
 	public static void main(String[] args) {

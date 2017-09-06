@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import com.bgee.base.constants.IOConstants;
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public class Files_nio {
 	public static void main(String[] args) {

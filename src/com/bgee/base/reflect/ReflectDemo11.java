@@ -2,7 +2,7 @@ package com.bgee.base.reflect;
 
 import java.lang.reflect.Method;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 反射调用 set 和 get 方法

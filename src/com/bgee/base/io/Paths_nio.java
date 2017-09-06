@@ -4,7 +4,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public class Paths_nio {
 	public static void main(String[] args) {

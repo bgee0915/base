@@ -3,7 +3,7 @@ package com.bgee.base.generic;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public class GenericDemo2 {
 	public static void main(String[] args) {

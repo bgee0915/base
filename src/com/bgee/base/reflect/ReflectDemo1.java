@@ -1,7 +1,7 @@
 package com.bgee.base.reflect;
 
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 反射实例1 获取类全名

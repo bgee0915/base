@@ -1,6 +1,6 @@
 package com.bgee.base.reflect;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public  interface Behavior {
 	public static final String fieldOne = "1";

@@ -3,7 +3,7 @@ package com.bgee.base.reflect;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 打印类的所有方法  修饰符 + 返回类型 + 方法名 + 参数类型 + 参数 + 异常

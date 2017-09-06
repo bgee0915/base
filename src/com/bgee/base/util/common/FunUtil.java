@@ -1,4 +1,4 @@
-package com.bgee.base.util;
+package com.bgee.base.util.common;
 
 public class FunUtil {
 	

@@ -3,7 +3,7 @@ package com.bgee.base.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Parameter;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 获取构造函数的参数及类型

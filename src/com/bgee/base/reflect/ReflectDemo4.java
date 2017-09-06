@@ -2,7 +2,7 @@ package com.bgee.base.reflect;
 
 import java.lang.reflect.Constructor;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 public class ReflectDemo4 {
 	public static void main(String[] args) {

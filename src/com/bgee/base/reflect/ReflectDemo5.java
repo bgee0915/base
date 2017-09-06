@@ -1,6 +1,6 @@
 package com.bgee.base.reflect;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 通过反射获知实现的接口   

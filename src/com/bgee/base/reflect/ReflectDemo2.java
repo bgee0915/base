@@ -1,6 +1,6 @@
 package com.bgee.base.reflect;
 
-import com.bgee.base.util.FunUtil;
+import com.bgee.base.util.common.FunUtil;
 
 /**
  * 实例化对象 的 三种方法
