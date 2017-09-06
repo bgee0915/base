@@ -4,6 +4,11 @@ import java.lang.reflect.Method;
 
 import com.bgee.base.util.FunUtil;
 
+/**
+ * 反射调用 set 和 get 方法
+ * @author bgee0915
+ *
+ */
 public class ReflectDemo11 {
 	public static void main(String[] args) {
 		Class<?> classdemo11 = null;
