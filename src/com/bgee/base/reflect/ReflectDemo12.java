@@ -1,6 +1,7 @@
 package com.bgee.base.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Scanner;
@@ -48,16 +49,16 @@ public class ReflectDemo12 {
 			System.out.println("  ");
 			String modifiers = Modifier.toString(c.getModifiers());
 			if(modifiers.length() > 0) {
-				System.out.println(modifiers + "  ");
+				System.out.print(modifiers + "  ");
 			}
-			System.out.println(name + "(");
+			System.out.print(name + "(");
 			
 			Class<?> []paramTypes = c.getParameterTypes();
 			for(int j=0; j<paramTypes.length; j++) {
 				if (j > 0) {
-					System.out.println(",");
+					System.out.print(",");
 				}
-				System.out.println(paramTypes[j].getName());
+				System.out.print(paramTypes[j].getName());
 				
 			}
 			System.out.println(");");
@@ -69,19 +70,36 @@ public class ReflectDemo12 {
 		for(Method m : methods) {
 			Class<?> returnType = m.getReturnType();
 			String name = m.getName();
-			System.out.println("  ");
+			System.out.print("  ");
 			String modifiers = Modifier.toString(m.getModifiers());
 			if(modifiers.length() > 0) {
-				System.out.println(modifiers + "  ");
-				System.out.println(returnType.getName() + " " + name + "(");
+				System.out.print(modifiers + "  ");
+				System.out.print(returnType.getName() + " " + name + "(");
 			}
 			
 			Class<?> []paramTypes = m.getParameterTypes();
+			for(int j=0; j<paramTypes.length; j++) {
+				if(j > 0) {
+					System.out.print(",");
+				}
+				System.out.println(paramTypes[j].getName());
+			}
 			
 		}
 	}
 	
 	public static void printFields(Class<?> c1) {
+		Field []fields = c1.getDeclaredFields();
+		for(Field f : fields) {
+			Class<?> type = f.getType();
+			String name = f.getName();
+			System.out.print("  ");
+			String modifier = Modifier.toString(f.getModifiers());
+			if(modifier.length() > 0) {
+				System.out.print(modifier + " ");
+			}
+			System.out.println(type.getName() + " " + name + ";");
+		}
 		
 	}
 }
