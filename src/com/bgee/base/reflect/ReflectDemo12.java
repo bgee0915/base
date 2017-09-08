@@ -1,6 +1,7 @@
 package com.bgee.base.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Scanner;
 
@@ -41,8 +42,8 @@ public class ReflectDemo12 {
 	}
 	
 	public static void printConstructors(Class<?> c1) {
-		Constructor[] constructors = c1.getDeclaredConstructors();
-		for(Constructor c : constructors) {
+		Constructor<?>[] constructors = c1.getDeclaredConstructors();
+		for(Constructor<?> c : constructors) {
 			String name = c.getName();
 			System.out.println("  ");
 			String modifiers = Modifier.toString(c.getModifiers());
@@ -51,15 +52,33 @@ public class ReflectDemo12 {
 			}
 			System.out.println(name + "(");
 			
-			Class []paramTypes = c.getParameterTypes();
+			Class<?> []paramTypes = c.getParameterTypes();
 			for(int j=0; j<paramTypes.length; j++) {
+				if (j > 0) {
+					System.out.println(",");
+				}
+				System.out.println(paramTypes[j].getName());
 				
 			}
+			System.out.println(");");
 		}
 	}
 	
 	public static void printMethods(Class<?> c1) {
-		
+		Method []methods = c1.getDeclaredMethods();
+		for(Method m : methods) {
+			Class<?> returnType = m.getReturnType();
+			String name = m.getName();
+			System.out.println("  ");
+			String modifiers = Modifier.toString(m.getModifiers());
+			if(modifiers.length() > 0) {
+				System.out.println(modifiers + "  ");
+				System.out.println(returnType.getName() + " " + name + "(");
+			}
+			
+			Class<?> []paramTypes = m.getParameterTypes();
+			
+		}
 	}
 	
 	public static void printFields(Class<?> c1) {
