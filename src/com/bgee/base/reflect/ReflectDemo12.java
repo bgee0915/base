@@ -22,17 +22,15 @@ public class ReflectDemo12 {
 			Class<?> superc1 = c1.getSuperclass();
 			String modifiers = Modifier.toString(c1.getModifiers());
 			if(modifiers.length() > 0) {
-				System.out.println(modifiers + "");
+				System.out.print(modifiers + "");
 			}
-			System.out.println("class " + name);
+			System.out.print("class " + name);
 			if (superc1 != null && superc1 != Object.class) {
 				System.out.println(" extends " + superc1.getName());
 			}
-			System.out.println("\n{\n");
+			System.out.print("  {");
 			printConstructors(c1);
-			System.out.println();
 			printMethods(c1);
-			System.out.println();
 			printFields(c1);
 			System.out.println("}");
 			
@@ -40,6 +38,8 @@ public class ReflectDemo12 {
 			e.printStackTrace();
 		}
 		System.exit(0);
+		
+		 
 	}
 	
 	public static void printConstructors(Class<?> c1) {
