@@ -18,4 +18,16 @@ public class FunUtil {
 			}
 		}
 	}
+	
+	/**
+	 * 判空
+	 * @param str
+	 * @return
+	 */
+	public static boolean blank(String str) {
+		if(null == str || 1 > str.length() || "".equals(str.trim())) {
+			return true;
+		}
+		return false;
+	}
 }
