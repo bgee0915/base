@@ -1,12 +1,9 @@
 package com.bgee.base.thread;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadDemo2 implements Runnable{
 	String name;
 	private Calc calc = new Calc();
-	Lock lock = new ReentrantLock();
 	
 	public static void main(String[] args) {
 
@@ -33,10 +30,9 @@ public class ThreadDemo2 implements Runnable{
 
 class Calc{
 	static int num = 0;
-	public void numAdd() {
+	public  void numAdd() {
 		num+=2;
 	}
-	
 }
 
 
