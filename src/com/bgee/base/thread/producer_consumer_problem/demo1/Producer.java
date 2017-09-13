@@ -21,10 +21,4 @@ public class Producer implements Runnable{
 	public void run() {
 		storage.produce(proNum);
 	}
-	
-	public int getProNum() {
-		return this.proNum;
-	}
-	
-	
 }

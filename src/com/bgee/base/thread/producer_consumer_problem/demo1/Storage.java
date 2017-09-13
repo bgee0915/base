@@ -47,11 +47,4 @@ public class Storage {
 		currentNum -= num;
 		System.out.println("消费 -" + num + ", 当前库存量 - " + currentNum);
 	}
-	
-	
-	public int getCurrentNum() {
-		return this.currentNum;
-	}
-	
-	
 }

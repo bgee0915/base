@@ -20,8 +20,4 @@ public class Consumer implements Runnable{
 	public void run() {
 		storage.consume(conNum);
 	}
-	
-	public int getConNum() {
-		return this.conNum;
-	}
 }
