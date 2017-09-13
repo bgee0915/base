@@ -1,4 +1,4 @@
-package com.bgee.base.thread;
+package com.bgee.base.thread.lock;
 
 import java.util.HashMap;
 import java.util.Map;
