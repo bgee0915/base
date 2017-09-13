@@ -19,7 +19,7 @@ public class Storage {
 	}
 	
 //	生产 num
-	public void produce(int num) {
+	public synchronized void produce(int num) {
 		while(num + currentNum > MAX_NUM) {
 			System.out.println("将超过仓储最大存储量 , 不生产, 当前库存量： " + currentNum + " -- 需要生产量: " + num);
 			try {
@@ -35,7 +35,7 @@ public class Storage {
 	
 	
 //	消费 num
-	public void consume(int num) {
+	public synchronized void consume(int num) {
 		while(num > currentNum) {
 			System.out.println("仓储存储量将不足 , 不支持消费, 当前库存量： " + currentNum + " -- 需要消费量: " + num);
 			try {
