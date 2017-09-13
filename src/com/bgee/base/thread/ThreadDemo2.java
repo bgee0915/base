@@ -3,35 +3,47 @@ package com.bgee.base.thread;
 
 public class ThreadDemo2 implements Runnable{
 	String name;
-	private Calc calc = new Calc();
+	private Calc calc;
 	
-	public static void main(String[] args) {
-
-		for(int i=1; i<=10; i++) {
-			new Thread(new ThreadDemo2(i+"")).start();
-		}
-		
-	}
+	
 
 	@Override
 	public void run() {	
+		int num = 0;
 		for(int i=0; i<10; i++) {
-			calc.numAdd();
+			num = getCalc().numAdd();
 		}
-		System.out.println("thread-" + Thread.currentThread().getName() + "    ---  num=" + Calc.num);
+		System.out.println("thread-" + Thread.currentThread().getName() + "    ---  num=" + num);
 	}
 	
 	
 	
-	ThreadDemo2(String name){
+	ThreadDemo2(Calc calc,String name){
 		this.name = name;
+		this.calc = calc;
+	}
+	
+	public Calc getCalc() {
+		return this.calc;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Calc calc = new Calc();
+		ThreadDemo2 threadDemo2 = null;
+		for(int i=1; i<=10; i++) {
+			threadDemo2 = new ThreadDemo2(calc,i+"");
+			new Thread(threadDemo2).start();
+		}
+		
 	}
 }
 
 class Calc{
-	static int num = 0;
-	public  void numAdd() {
-		num+=2;
+	int num = 0;
+	public synchronized  int numAdd() {
+		return num+=2;
 	}
 }
 
