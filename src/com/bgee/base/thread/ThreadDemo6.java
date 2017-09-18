@@ -3,6 +3,11 @@ package com.bgee.base.thread;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * lock 
+ * @author bgee0915
+ *
+ */
 public class ThreadDemo6 {
 	private static int num;
 	private Lock lock = new ReentrantLock();
