@@ -1,5 +1,8 @@
 package com.bgee.base.thread.producer_consumer_problem.demo1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 仓储
  * @author bgee0915
