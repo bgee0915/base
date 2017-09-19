@@ -1,4 +1,4 @@
-package com.bgee.base.thread;
+package com.bgee.base.thread.base_synchronized;
 
 
 public class ThreadDemo2 implements Runnable{

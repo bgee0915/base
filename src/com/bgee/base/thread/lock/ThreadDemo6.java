@@ -1,4 +1,4 @@
-package com.bgee.base.thread;
+package com.bgee.base.thread.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

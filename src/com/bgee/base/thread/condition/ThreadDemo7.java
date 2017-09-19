@@ -1,4 +1,4 @@
-package com.bgee.base.thread;
+package com.bgee.base.thread.condition;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

@@ -1,6 +1,5 @@
 package com.bgee.base.thread;
 
-import com.bgee.base.util.common.FunUtil;
 
 /**
  *  thread.join()   demo

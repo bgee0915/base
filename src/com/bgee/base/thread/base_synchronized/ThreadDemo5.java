@@ -1,4 +1,4 @@
-package com.bgee.base.thread;
+package com.bgee.base.thread.base_synchronized;
 
 import java.util.ArrayList;
 import java.util.List;
