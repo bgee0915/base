@@ -1,5 +1,7 @@
 package com.bgee.base.algorithm.sort;
 
+import com.bgee.base.util.common.FunUtil;
+
 /**
  * 快速排序
  * @author bgee0915
@@ -32,7 +34,7 @@ public class FastSort {
             }
             
             if(a[end] <= key){
-            	swap(a,start,end);
+            	FunUtil.swap(a,start,end);
             }
 
 
@@ -40,22 +42,17 @@ public class FastSort {
                 start++;
             }
             if(key <= a[start]){
-            	swap(a,start,end);
+            	FunUtil.swap(a,start,end);
             }
         }
         if(start > low){
             sort(a,low,start-1);
         }
         if(end < height){
-        	System.out.println("end: " + end + ",  height: " + height);
             sort(a,end+1,height);
         }
     }
     
-    public static void swap(int []array, int a,int b) {
-    	int temp = 0;
-    	temp = array[a];
-    	array[a] = array[b];
-    	array[b] = temp;
-    }
+   
+     
 }

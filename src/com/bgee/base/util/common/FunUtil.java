@@ -30,4 +30,17 @@ public class FunUtil {
 		}
 		return false;
 	}
+	
+	/**
+	 * 交换数据
+	 * @param array
+	 * @param start
+	 * @param end
+	 */
+	public static void swap(int []array, int start, int end) {
+		int temp = 0;
+		temp = array[start];
+		array[start] = array[end];
+		array[end] = temp;
+	}
 }
