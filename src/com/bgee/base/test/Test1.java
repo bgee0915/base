@@ -1,21 +1,20 @@
 package com.bgee.base.test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.locks.ReadWriteLock;
 
 
-public class Test1 {
+public class Test1 implements Callable<String>{
 	public static void main(String[] args) {
-		
-//		java8 新特性  ,  join
-		List<String> list = new ArrayList<String>();
-		list.add("a");
-		list.add("b");
-		list.add("c");
-		
-		String splitStr = String.join(",",list);
-		System.out.println(splitStr);
-		
+ 
 	}
+
+	@Override
+	public String call() throws Exception {
+		System.out.println("===  go === ");
+		return "result";
+	}
+	
 }
